@@ -1,5 +1,5 @@
 ﻿
-namespace Gest_Container.Vues
+namespace GestContainer.Vues
 {
     partial class FormFenetrePrincipale
     {
@@ -29,7 +29,17 @@ namespace Gest_Container.Vues
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuPrincipalMenuStrip = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
+            // 
+            // menuPrincipalMenuStrip
+            // 
+            this.menuPrincipalMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuPrincipalMenuStrip.Name = "menuPrincipalMenuStrip";
+            this.menuPrincipalMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menuPrincipalMenuStrip.Size = new System.Drawing.Size(815, 24);
+            this.menuPrincipalMenuStrip.TabIndex = 1;
+            this.menuPrincipalMenuStrip.Text = "menuPrincipalMenuStrip";
             // 
             // FormFenetrePrincipale
             // 
@@ -37,15 +47,24 @@ namespace Gest_Container.Vues
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = global::GestContainer.Properties.Resources.logo_tholdi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(815, 450);
+            this.Controls.Add(this.menuPrincipalMenuStrip);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuPrincipalMenuStrip;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormFenetrePrincipale";
             this.RightToLeftLayout = true;
             this.Text = "GestionContainer";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuPrincipalMenuStrip;
     }
 }

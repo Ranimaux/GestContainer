@@ -8,10 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gest_Container.Vues
+namespace GestContainer.Vues
 {
     public partial class FormFenetrePrincipale : Form
     {
+        private Form _mdiChild;
+
+        private Form MdiChild
+        {
+            get { return _mdiChild; }
+            set
+            {
+                if(_mdiChild != null)
+                {
+                    _mdiChild.Dispose();
+                }
+                _mdiChild = value;
+                _mdiChild.MdiParent = this;
+                _mdiChild.MaximumSize = _mdiChild.Size;
+                _mdiChild.MinimumSize = _mdiChild.Size;
+                _mdiChild.Show();
+            }
+        }
         public FormFenetrePrincipale()
         {
             InitializeComponent();
