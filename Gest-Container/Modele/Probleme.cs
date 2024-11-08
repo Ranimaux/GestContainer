@@ -8,5 +8,22 @@ namespace GestContainer.Modele
 {
     class Probleme
     {
+        private int _codeProbleme;
+        private string _libelleProbleme;
+
+        public int codeProbleme
+        {
+            get { return _codeProbleme; }
+        }
+
+        public string libelleProbleme
+        {
+            get { return _libelleProbleme; }
+        }
+
+        public Probleme()
+        {
+
+        }
     }
 }
