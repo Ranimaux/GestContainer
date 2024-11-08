@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Gest_Container</RootNamespace>
+    <RootNamespace>GestContainer</RootNamespace>
     <AssemblyName>Gest-Container</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

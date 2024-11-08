@@ -34,6 +34,7 @@ namespace GestContainer.Vues
             // 
             // menuPrincipalMenuStrip
             // 
+            this.menuPrincipalMenuStrip.BackgroundImage = global::GestContainer.Properties.Resources.logo_tholdi2;
             this.menuPrincipalMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipalMenuStrip.Name = "menuPrincipalMenuStrip";
             this.menuPrincipalMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -47,7 +48,6 @@ namespace GestContainer.Vues
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::GestContainer.Properties.Resources.logo_tholdi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(815, 450);
             this.Controls.Add(this.menuPrincipalMenuStrip);
