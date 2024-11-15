@@ -73,7 +73,7 @@ namespace GestContainer.Resources
             }
         }
 
-        public static void AjouterUneDeclaration(int code,string libelle, bool urgence)
+        public static void AjouterUneDeclaration(string libelle, bool urgence)
         {
             try
             {
@@ -82,9 +82,8 @@ namespace GestContainer.Resources
 
                     MySqlCommand cmd = new MySqlCommand();
                     cmd.Connection = connection;
-                    cmd.CommandText = "INSERT INTO DECLARATION(codeDeclaration,commentaireDeclaration, dateDeclaration, urgence) VALUES(@codeDeclaration, @commentaireDeclaration, @dateDeclaration, @urgence)";
+                    cmd.CommandText = "INSERT INTO DECLARATION(commentaireDeclaration, dateDeclaration, urgence) VALUES(@codeDeclaration, @commentaireDeclaration, @dateDeclaration, @urgence)";
                     cmd.Prepare();
-                    cmd.Parameters.AddWithValue("@codeDeclaration", code);
                     cmd.Parameters.AddWithValue("@commentaireDeclaration", libelle);
                     cmd.Parameters.AddWithValue("@dateDeclaration", DateTime.Now);
                     cmd.Parameters.AddWithValue("@urgence", urgence);

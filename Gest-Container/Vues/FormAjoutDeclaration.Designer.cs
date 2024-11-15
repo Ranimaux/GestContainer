@@ -32,15 +32,13 @@ namespace GestContainer.Vues
             this.label1 = new System.Windows.Forms.Label();
             this.ButtonAjoutDeclaration = new System.Windows.Forms.Button();
             this.textBoxCommentaire = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxNumeroDeclaration = new System.Windows.Forms.TextBox();
             this.checkBoxUrgence = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 111);
+            this.label1.Location = new System.Drawing.Point(29, 24);
             this.label1.MinimumSize = new System.Drawing.Size(150, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 50);
@@ -49,7 +47,7 @@ namespace GestContainer.Vues
             // 
             // ButtonAjoutDeclaration
             // 
-            this.ButtonAjoutDeclaration.Location = new System.Drawing.Point(583, 364);
+            this.ButtonAjoutDeclaration.Location = new System.Drawing.Point(578, 264);
             this.ButtonAjoutDeclaration.Name = "ButtonAjoutDeclaration";
             this.ButtonAjoutDeclaration.Size = new System.Drawing.Size(75, 23);
             this.ButtonAjoutDeclaration.TabIndex = 1;
@@ -59,34 +57,16 @@ namespace GestContainer.Vues
             // 
             // textBoxCommentaire
             // 
-            this.textBoxCommentaire.Location = new System.Drawing.Point(218, 111);
+            this.textBoxCommentaire.Location = new System.Drawing.Point(218, 24);
             this.textBoxCommentaire.Multiline = true;
             this.textBoxCommentaire.Name = "textBoxCommentaire";
             this.textBoxCommentaire.Size = new System.Drawing.Size(305, 202);
             this.textBoxCommentaire.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 9);
-            this.label2.MinimumSize = new System.Drawing.Size(150, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 50);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Numéro Déclaration :";
-            // 
-            // textBoxNumeroDeclaration
-            // 
-            this.textBoxNumeroDeclaration.Location = new System.Drawing.Point(218, 9);
-            this.textBoxNumeroDeclaration.Name = "textBoxNumeroDeclaration";
-            this.textBoxNumeroDeclaration.Size = new System.Drawing.Size(102, 20);
-            this.textBoxNumeroDeclaration.TabIndex = 4;
-            this.textBoxNumeroDeclaration.TextChanged += new System.EventHandler(this.textBoxNumeroDeclaration_TextChanged);
-            // 
             // checkBoxUrgence
             // 
             this.checkBoxUrgence.AutoSize = true;
-            this.checkBoxUrgence.Location = new System.Drawing.Point(218, 349);
+            this.checkBoxUrgence.Location = new System.Drawing.Point(218, 264);
             this.checkBoxUrgence.Margin = new System.Windows.Forms.Padding(8);
             this.checkBoxUrgence.MinimumSize = new System.Drawing.Size(10, 10);
             this.checkBoxUrgence.Name = "checkBoxUrgence";
@@ -103,8 +83,6 @@ namespace GestContainer.Vues
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(931, 656);
             this.Controls.Add(this.checkBoxUrgence);
-            this.Controls.Add(this.textBoxNumeroDeclaration);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxCommentaire);
             this.Controls.Add(this.ButtonAjoutDeclaration);
             this.Controls.Add(this.label1);
@@ -121,8 +99,6 @@ namespace GestContainer.Vues
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ButtonAjoutDeclaration;
         private System.Windows.Forms.TextBox textBoxCommentaire;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxNumeroDeclaration;
         private System.Windows.Forms.CheckBox checkBoxUrgence;
     }
 }

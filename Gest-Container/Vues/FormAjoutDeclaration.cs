@@ -21,14 +21,15 @@ namespace GestContainer.Vues
 
         private void ButtonAjoutDeclaration_Click(object sender, EventArgs e)
         {
-            int codeDeclaration = int.Parse(textBoxNumeroDeclaration.Text);
+
             string libelleDeclaration = textBoxCommentaire.Text;
             bool urgenceDeclaration = checkBoxUrgence.Checked;
 
             if(VerificationDuFormulaire() != false)
             {
-                DataBase.AjouterUneDeclaration(codeDeclaration, libelleDeclaration, urgenceDeclaration);
+                DataBase.AjouterUneDeclaration(libelleDeclaration, urgenceDeclaration);
             }
+            ReinitialiserFormulaire();
         }
 
         private void textBoxNumeroDeclaration_TextChanged(object sender, EventArgs e)
@@ -38,15 +39,7 @@ namespace GestContainer.Vues
 
         private void FormAjoutDeclaration_Load(object sender, EventArgs e)
         {
-            int max = 0;
-            foreach(Declaration item in Donnees.CollectionDeclaration)
-            {
-                if(item.codeDeclaration > max)
-                {
-                    max = item.codeDeclaration;
-                }
-                textBoxNumeroDeclaration.Text = Convert.ToString(max + 1);
-            }
+            
         }
 
         private bool VerificationDuFormulaire()
@@ -62,6 +55,12 @@ namespace GestContainer.Vues
             }
 
             return formChecked;
+        }
+
+        private void ReinitialiserFormulaire()
+        {
+            textBoxCommentaire.Clear();
+            checkBoxUrgence.Text = null;
         }
     }
 }
