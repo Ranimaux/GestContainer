@@ -34,5 +34,10 @@ namespace GestContainer.Vues
         {
             InitializeComponent();
         }
+
+        private void déclarerUnAccidentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MdiChild = new FormAjoutDeclaration();
+        }
     }
 }

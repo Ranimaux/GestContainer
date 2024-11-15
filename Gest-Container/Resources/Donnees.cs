@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GestContainer.Modele;
+using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+using System.Data;
+using GestContainer.Resources;
 
 namespace GestContainer.Resources
 {
@@ -29,16 +33,48 @@ namespace GestContainer.Resources
 
         public static List<Declaration> CollectionDeclaration
         {
-            get
-            {
-                if(_collectionDeclaration == null)
-                {
+            get {
 
+                if (_collectionDeclaration == null)
+                {
+                    List<Declaration> desDeclaration = new List<Declaration>();
+                    DataBase connectionDataBase = new DataBase();
+
+                    try
+                    {
+                        DataBase.OpenConnection();
+                        MySqlCommand cmd = new MySqlCommand("SELECT * FROM DECLARATION", DataBase.GetConnection());
+                        cmd.CommandType = CommandType.Text;
+                        MySqlDataReader reader = cmd.ExecuteReader();
+                        Declaration uneDeclaration = new Declaration();
+                        while (reader.Read())
+                        {
+
+                            uneDeclaration.codeDeclaration = Convert.ToInt32(reader[0].ToString());
+                            uneDeclaration.commentaireDeclaration = reader[1].ToString();
+                            uneDeclaration.dateDeclaration = reader.GetDateTime(2);
+                            uneDeclaration.urgence = Convert.ToBoolean(reader[3]);
+                            uneDeclaration.traite = Convert.ToBoolean(reader[4]);
+                            
+                            desDeclaration.Add(uneDeclaration);
+                        }
+                        _collectionDeclaration = desDeclaration;
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Erreur lors de la récupération de la table Declaration : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        DataBase.CloseConnection();
+                    }
+                    
                 }
                 return Donnees._collectionDeclaration;
             }
             set { Donnees._collectionDeclaration = value; }
         }
+
 
         public static List<Inspection> CollectionInspection
         {
