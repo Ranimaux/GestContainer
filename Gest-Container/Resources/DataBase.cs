@@ -82,7 +82,7 @@ namespace GestContainer.Resources
 
                     MySqlCommand cmd = new MySqlCommand();
                     cmd.Connection = connection;
-                    cmd.CommandText = "INSERT INTO DECLARATION(commentaireDeclaration, dateDeclaration, urgence) VALUES(@codeDeclaration, @commentaireDeclaration, @dateDeclaration, @urgence)";
+                    cmd.CommandText = "INSERT INTO DECLARATION(commentaireDeclaration, dateDeclaration, urgence) VALUES(@commentaireDeclaration, @dateDeclaration, @urgence)";
                     cmd.Prepare();
                     cmd.Parameters.AddWithValue("@commentaireDeclaration", libelle);
                     cmd.Parameters.AddWithValue("@dateDeclaration", DateTime.Now);
@@ -101,6 +101,31 @@ namespace GestContainer.Resources
                 CloseConnection();
             }
 
+        }
+
+        public static void ModifierUneDeclaration(int codeDecla, string libelleDecla, bool urgence)
+        {
+            try
+            {
+                MySqlConnection connection = OpenConnection();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "UPDATE DECLARATION SET commentaireDeclaration = @commentaireDeclaration, urgence = @urgence Where codeDeclaration = @codeDeclaration;";
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@commentaireDeclaration", libelleDecla);
+                cmd.Parameters.AddWithValue("@urgence", urgence);
+                cmd.Parameters.AddWithValue("@codeDeclaration", codeDecla);
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Une erreur de traitement lors de la modification d'une déclaration : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }

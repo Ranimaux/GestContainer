@@ -38,7 +38,6 @@ namespace GestContainer.Resources
                 if (_collectionDeclaration == null)
                 {
                     List<Declaration> desDeclaration = new List<Declaration>();
-                    DataBase connectionDataBase = new DataBase();
 
                     try
                     {
@@ -46,16 +45,19 @@ namespace GestContainer.Resources
                         MySqlCommand cmd = new MySqlCommand("SELECT * FROM DECLARATION", DataBase.GetConnection());
                         cmd.CommandType = CommandType.Text;
                         MySqlDataReader reader = cmd.ExecuteReader();
-                        Declaration uneDeclaration = new Declaration();
+
                         while (reader.Read())
                         {
-
-                            uneDeclaration.codeDeclaration = Convert.ToInt32(reader[0].ToString());
-                            uneDeclaration.commentaireDeclaration = reader[1].ToString();
-                            uneDeclaration.dateDeclaration = reader.GetDateTime(2);
-                            uneDeclaration.urgence = Convert.ToBoolean(reader[3]);
-                            uneDeclaration.traite = Convert.ToBoolean(reader[4]);
                             
+                            Declaration uneDeclaration = new Declaration
+                            {
+                                codeDeclaration = Convert.ToInt32(reader[0].ToString()),
+                                commentaireDeclaration = reader[1].ToString(),
+                                dateDeclaration = reader.GetDateTime(2),
+                                urgence = Convert.ToBoolean(reader[3]),
+                                traite = Convert.ToBoolean(reader[4])
+                            };
+
                             desDeclaration.Add(uneDeclaration);
                         }
                         _collectionDeclaration = desDeclaration;

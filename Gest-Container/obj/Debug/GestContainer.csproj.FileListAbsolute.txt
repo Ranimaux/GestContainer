@@ -16,3 +16,6 @@ E:\pp3\Gest-Container\obj\Debug\Gest-Container.exe
 E:\pp3\Gest-Container\obj\Debug\Gest-Container.pdb
 E:\pp3\Gest-Container\obj\Debug\GestContainer.csproj.AssemblyReference.cache
 E:\pp3\Gest-Container\obj\Debug\GestContainer.Vues.FormAjoutDeclaration.resources
+E:\pp3\Gest-Container\bin\Debug\MaterialSkin.dll
+E:\pp3\Gest-Container\obj\Debug\GestContainer.Vues.FormConsultationDeclaration.resources
+E:\pp3\Gest-Container\obj\Debug\GestContainer.Vues.FormModificationDeclaration.resources
