@@ -31,7 +31,8 @@ namespace GestContainer.Vues
         {
             this.menuPrincipalMenuStrip = new System.Windows.Forms.MenuStrip();
             this.dECLARATIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DeclarerUnAccidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeclarerUnIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsulterLesIncidentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipalMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,17 +51,26 @@ namespace GestContainer.Vues
             // dECLARATIONToolStripMenuItem
             // 
             this.dECLARATIONToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DeclarerUnAccidentToolStripMenuItem});
+            this.DeclarerUnIncidentToolStripMenuItem,
+            this.ConsulterLesIncidentsToolStripMenuItem});
             this.dECLARATIONToolStripMenuItem.Name = "dECLARATIONToolStripMenuItem";
             this.dECLARATIONToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.dECLARATIONToolStripMenuItem.Text = "DECLARATION";
             // 
-            // DeclarerUnAccidentToolStripMenuItem
+            // DeclarerUnIncidentToolStripMenuItem
             // 
-            this.DeclarerUnAccidentToolStripMenuItem.Name = "DeclarerUnAccidentToolStripMenuItem";
-            this.DeclarerUnAccidentToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.DeclarerUnAccidentToolStripMenuItem.Text = "Déclarer un accident";
-            this.DeclarerUnAccidentToolStripMenuItem.Click += new System.EventHandler(this.déclarerUnAccidentToolStripMenuItem_Click);
+            this.DeclarerUnIncidentToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.DeclarerUnIncidentToolStripMenuItem.Name = "DeclarerUnIncidentToolStripMenuItem";
+            this.DeclarerUnIncidentToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.DeclarerUnIncidentToolStripMenuItem.Text = "Déclarer un incident";
+            this.DeclarerUnIncidentToolStripMenuItem.Click += new System.EventHandler(this.declarerUnAccidentToolStripMenuItem_Click);
+            // 
+            // ConsulterLesIncidentsToolStripMenuItem
+            // 
+            this.ConsulterLesIncidentsToolStripMenuItem.Name = "ConsulterLesIncidentsToolStripMenuItem";
+            this.ConsulterLesIncidentsToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.ConsulterLesIncidentsToolStripMenuItem.Text = "Consulter les incidents";
+            this.ConsulterLesIncidentsToolStripMenuItem.Click += new System.EventHandler(this.ConsulterLesIncidentsToolStripMenuItem_Click);
             // 
             // FormFenetrePrincipale
             // 
@@ -72,6 +82,7 @@ namespace GestContainer.Vues
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(815, 450);
             this.Controls.Add(this.menuPrincipalMenuStrip);
+            this.DoubleBuffered = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuPrincipalMenuStrip;
             this.MaximizeBox = false;
@@ -90,6 +101,7 @@ namespace GestContainer.Vues
 
         private System.Windows.Forms.MenuStrip menuPrincipalMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem dECLARATIONToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem DeclarerUnAccidentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DeclarerUnIncidentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ConsulterLesIncidentsToolStripMenuItem;
     }
 }
