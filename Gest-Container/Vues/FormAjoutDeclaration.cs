@@ -32,11 +32,6 @@ namespace GestContainer.Vues
             ReinitialiserFormulaire();
         }
 
-        private void textBoxNumeroDeclaration_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormAjoutDeclaration_Load(object sender, EventArgs e)
         {
             

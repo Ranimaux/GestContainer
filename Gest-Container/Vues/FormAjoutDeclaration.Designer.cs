@@ -33,6 +33,7 @@ namespace GestContainer.Vues
             this.ButtonAjoutDeclaration = new System.Windows.Forms.Button();
             this.textBoxCommentaire = new System.Windows.Forms.TextBox();
             this.checkBoxUrgence = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -66,15 +67,24 @@ namespace GestContainer.Vues
             // checkBoxUrgence
             // 
             this.checkBoxUrgence.AutoSize = true;
-            this.checkBoxUrgence.Location = new System.Drawing.Point(218, 264);
+            this.checkBoxUrgence.Location = new System.Drawing.Point(218, 268);
             this.checkBoxUrgence.Margin = new System.Windows.Forms.Padding(8);
             this.checkBoxUrgence.MinimumSize = new System.Drawing.Size(10, 10);
             this.checkBoxUrgence.Name = "checkBoxUrgence";
-            this.checkBoxUrgence.Size = new System.Drawing.Size(58, 17);
+            this.checkBoxUrgence.Size = new System.Drawing.Size(15, 14);
             this.checkBoxUrgence.TabIndex = 5;
-            this.checkBoxUrgence.Text = "Urgent";
             this.checkBoxUrgence.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.checkBoxUrgence.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 268);
+            this.label2.MinimumSize = new System.Drawing.Size(150, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 50);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Urgence :";
             // 
             // FormAjoutDeclaration
             // 
@@ -82,6 +92,7 @@ namespace GestContainer.Vues
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(931, 656);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBoxUrgence);
             this.Controls.Add(this.textBoxCommentaire);
             this.Controls.Add(this.ButtonAjoutDeclaration);
@@ -100,5 +111,6 @@ namespace GestContainer.Vues
         private System.Windows.Forms.Button ButtonAjoutDeclaration;
         private System.Windows.Forms.TextBox textBoxCommentaire;
         private System.Windows.Forms.CheckBox checkBoxUrgence;
+        private System.Windows.Forms.Label label2;
     }
 }
