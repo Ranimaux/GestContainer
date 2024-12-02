@@ -34,6 +34,8 @@ namespace GestContainer.Vues
             this.textBoxCommentaire = new System.Windows.Forms.TextBox();
             this.checkBoxUrgence = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ComboBoxProbleme = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +50,7 @@ namespace GestContainer.Vues
             // 
             // ButtonAjoutDeclaration
             // 
-            this.ButtonAjoutDeclaration.Location = new System.Drawing.Point(578, 264);
+            this.ButtonAjoutDeclaration.Location = new System.Drawing.Point(551, 372);
             this.ButtonAjoutDeclaration.Name = "ButtonAjoutDeclaration";
             this.ButtonAjoutDeclaration.Size = new System.Drawing.Size(75, 23);
             this.ButtonAjoutDeclaration.TabIndex = 1;
@@ -86,12 +88,32 @@ namespace GestContainer.Vues
             this.label2.TabIndex = 6;
             this.label2.Text = "Urgence :";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 322);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Probleme :";
+            // 
+            // ComboBoxProbleme
+            // 
+            this.ComboBoxProbleme.FormattingEnabled = true;
+            this.ComboBoxProbleme.Location = new System.Drawing.Point(218, 322);
+            this.ComboBoxProbleme.Name = "ComboBoxProbleme";
+            this.ComboBoxProbleme.Size = new System.Drawing.Size(305, 21);
+            this.ComboBoxProbleme.TabIndex = 8;
+            this.ComboBoxProbleme.SelectedIndexChanged += new System.EventHandler(this.ComboBoxProbleme_SelectedIndexChanged);
+            // 
             // FormAjoutDeclaration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(931, 656);
+            this.ClientSize = new System.Drawing.Size(672, 439);
+            this.Controls.Add(this.ComboBoxProbleme);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBoxUrgence);
             this.Controls.Add(this.textBoxCommentaire);
@@ -112,5 +134,7 @@ namespace GestContainer.Vues
         private System.Windows.Forms.TextBox textBoxCommentaire;
         private System.Windows.Forms.CheckBox checkBoxUrgence;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox ComboBoxProbleme;
     }
 }
