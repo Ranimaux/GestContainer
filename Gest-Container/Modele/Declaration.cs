@@ -12,15 +12,8 @@ using MySql.Data.MySqlClient;
 
 namespace GestContainer.Modele
 {
-    class Declaration
+    public class Declaration
     {
-        private int _codeDeclaration;
-        private string _commentaireDeclaration;
-        private DateTime _date;
-        private bool _urgence;
-        private bool _traite;
-
-
         public int codeDeclaration { get; set; }
 
         public string commentaireDeclaration { get; set; }
@@ -30,6 +23,10 @@ namespace GestContainer.Modele
         public bool urgence { get; set; }
 
         public bool traite { get; set; }
+
+        public int numContainer { get; set; }
+
+        public string codeProbleme { get; set; }
         public Declaration()
         {
             
