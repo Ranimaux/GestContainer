@@ -46,6 +46,7 @@ namespace GestContainer.Vues
             {
                 DataBase.ModifierUneDeclaration(codeDeclaration, commentaireDeclaration, Urgence);
                 DialogResult = DialogResult.OK;
+                MessageBox.Show("La déclaration a été modifié avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
         }

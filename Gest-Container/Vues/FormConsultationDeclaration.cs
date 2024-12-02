@@ -27,7 +27,7 @@ namespace GestContainer.Vues
 
         private void buttonModification_Click(object sender, EventArgs e)
         {
-            //dataGridViewListDeclaration.DataSource = null;
+            
             if(dataGridViewListDeclaration.SelectedRows.Count > 0)
             {
                 var row = dataGridViewListDeclaration.SelectedRows[0];
@@ -37,14 +37,28 @@ namespace GestContainer.Vues
                 bool urgence = (bool)row.Cells["urgence"].Value;
                 bool traite = (bool)row.Cells["traite"].Value;
 
-                FormModificationDeclaration modificationDeclaration = new FormModificationDeclaration(codeDeclaration, commentaireDeclaration, dateDeclaration, urgence, traite);
-                modificationDeclaration.Show();
+                using (FormModificationDeclaration modificationDeclaration = new FormModificationDeclaration(codeDeclaration, commentaireDeclaration, dateDeclaration, urgence, traite))
+                {
+                    
+                    if(modificationDeclaration.ShowDialog() == DialogResult.OK)
+                    {
+                        RefreshCollectionDeclaration();
+                    }
+                }
+                
             }
             else
             {
                 MessageBox.Show("Vous devez sélectionner une ligne complète", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+        }
+
+        private void RefreshCollectionDeclaration()
+        {
+            Donnees.CollectionDeclaration = DataBase.ConsultationDesDeclarations();
+            dataGridViewListDeclaration.DataSource = null;
+            dataGridViewListDeclaration.DataSource = Donnees.CollectionDeclaration;
         }
     }
 }
