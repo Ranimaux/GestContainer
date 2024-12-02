@@ -48,14 +48,15 @@ namespace GestContainer.Resources
 
                         while (reader.Read())
                         {
-                            
+
                             Declaration uneDeclaration = new Declaration
                             {
                                 codeDeclaration = Convert.ToInt32(reader[0].ToString()),
                                 commentaireDeclaration = reader[1].ToString(),
                                 dateDeclaration = reader.GetDateTime(2),
                                 urgence = Convert.ToBoolean(reader[3]),
-                                traite = Convert.ToBoolean(reader[4])
+                                traite = Convert.ToBoolean(reader[4]),
+                                codeProbleme = reader[6].ToString()
                             };
 
                             desDeclaration.Add(uneDeclaration);
@@ -97,7 +98,34 @@ namespace GestContainer.Resources
             {
                 if(_collectionInspection == null)
                 {
+                    List<Probleme> desProblemes = new List<Probleme>();
 
+                    try
+                    {
+                        DataBase.OpenConnection();
+                        MySqlCommand cmd = new MySqlCommand("SELECT * FROM PROBLEME", DataBase.GetConnection());
+                        cmd.CommandType = CommandType.Text;
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            Probleme unProbleme = new Probleme
+                            {
+                                codeProbleme = reader[0].ToString(),
+                                libelleProbleme = reader[1].ToString()
+                            };
+                            
+                            desProblemes.Add(unProbleme);
+                        }
+                        _collectionProbleme = desProblemes;
+                    } catch(MySqlException ex)
+                    {
+                        MessageBox.Show("Erreur lors de la récupération de la table Probleme : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        DataBase.CloseConnection();
+                    }
                 }
                 return Donnees._collectionProbleme;
             }
