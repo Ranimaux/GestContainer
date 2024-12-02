@@ -90,6 +90,7 @@ namespace GestContainer.Vues
             this.Name = "FormFenetrePrincipale";
             this.RightToLeftLayout = true;
             this.Text = "GestionContainer";
+            this.Load += new System.EventHandler(this.FormFenetrePrincipale_Load);
             this.menuPrincipalMenuStrip.ResumeLayout(false);
             this.menuPrincipalMenuStrip.PerformLayout();
             this.ResumeLayout(false);

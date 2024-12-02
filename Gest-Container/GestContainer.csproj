@@ -33,9 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,11 +65,35 @@
     <Compile Include="Vues\FormAjoutDeclaration.Designer.cs">
       <DependentUpon>FormAjoutDeclaration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vues\FormAjouterProbleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\FormAjouterProbleme.Designer.cs">
+      <DependentUpon>FormAjouterProbleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\FormConsultationDeclaration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\FormConsultationDeclaration.Designer.cs">
+      <DependentUpon>FormConsultationDeclaration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\FormFenetreAuthentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\FormFenetreAuthentification.Designer.cs">
+      <DependentUpon>FormFenetreAuthentification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vues\FormFenetrePrincipale.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vues\FormFenetrePrincipale.Designer.cs">
       <DependentUpon>FormFenetrePrincipale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\FormModificationDeclaration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\FormModificationDeclaration.Designer.cs">
+      <DependentUpon>FormModificationDeclaration.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,9 +108,22 @@
     <EmbeddedResource Include="Vues\FormAjoutDeclaration.resx">
       <DependentUpon>FormAjoutDeclaration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vues\FormAjouterProbleme.resx">
+      <DependentUpon>FormAjouterProbleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\FormConsultationDeclaration.resx">
+      <DependentUpon>FormConsultationDeclaration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\FormFenetreAuthentification.resx">
+      <DependentUpon>FormFenetreAuthentification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vues\FormFenetrePrincipale.resx">
       <DependentUpon>FormFenetrePrincipale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vues\FormModificationDeclaration.resx">
+      <DependentUpon>FormModificationDeclaration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

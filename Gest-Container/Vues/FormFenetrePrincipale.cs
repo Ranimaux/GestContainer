@@ -44,5 +44,10 @@ namespace GestContainer.Vues
         {
             MdiChild = new FormAjoutDeclaration();
         }
+
+        private void FormFenetrePrincipale_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
