@@ -73,7 +73,51 @@ namespace GestContainer.Resources
             }
         }
 
-        public static void AjouterUneDeclaration(string libelle, bool urgence)
+        public static List<Declaration> ConsultationDesDeclarations()
+        {
+            List<Declaration> desDeclarations = new List<Declaration>();
+
+            try
+            {
+                MySqlConnection connection = OpenConnection(); 
+                MySqlCommand cmd = new MySqlCommand
+                {
+                    Connection = connection,
+                    CommandText = "SELECT * FROM DECLARATION",
+                    CommandType = System.Data.CommandType.Text 
+                };
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Declaration uneDeclaration = new Declaration
+                    {
+                        codeDeclaration = Convert.ToInt32(reader[0].ToString()),
+                        commentaireDeclaration = reader[1].ToString(),
+                        dateDeclaration = reader.GetDateTime(2),
+                        urgence = Convert.ToBoolean(reader[3]),
+                        traite = Convert.ToBoolean(reader[4]),
+                        codeProbleme = reader[6].ToString()
+                    };
+
+                    desDeclarations.Add(uneDeclaration);
+                }
+
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur lors de la récupération de la table Declaration : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                CloseConnection(); 
+            }
+
+            return desDeclarations;
+        }
+        public static void AjouterUneDeclaration(string libelle, bool urgence, string codeP)
         {
             try
             {
@@ -82,11 +126,12 @@ namespace GestContainer.Resources
 
                     MySqlCommand cmd = new MySqlCommand();
                     cmd.Connection = connection;
-                    cmd.CommandText = "INSERT INTO DECLARATION(commentaireDeclaration, dateDeclaration, urgence) VALUES(@commentaireDeclaration, @dateDeclaration, @urgence)";
+                    cmd.CommandText = "INSERT INTO DECLARATION(commentaireDeclaration, dateDeclaration, urgence, codeProbleme) VALUES(@commentaireDeclaration, @dateDeclaration, @urgence, @codeProbleme)";
                     cmd.Prepare();
                     cmd.Parameters.AddWithValue("@commentaireDeclaration", libelle);
                     cmd.Parameters.AddWithValue("@dateDeclaration", DateTime.Now);
                     cmd.Parameters.AddWithValue("@urgence", urgence);
+                    cmd.Parameters.AddWithValue("@codeProbleme", codeP);
                     cmd.ExecuteNonQuery();
 
 
@@ -121,6 +166,31 @@ namespace GestContainer.Resources
             catch (MySqlException ex)
             {
                 MessageBox.Show("Une erreur de traitement lors de la modification d'une déclaration : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public static void AjouterUnProbleme(string codeP, string libelleP)
+        {
+            try
+            {
+                MySqlConnection connection = OpenConnection();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "INSERT INTO PROBLEME(codeProbleme, libelleProbleme) VALUES(@codeProbleme, @libelleProbleme)";
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@codeProbleme", codeP);
+                cmd.Parameters.AddWithValue("@libelleProbleme", libelleP);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch(MySqlException ex)
+            {
+                MessageBox.Show("Une erreur de traitement lors de l'envoi du Probleme : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
