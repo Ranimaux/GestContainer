@@ -7,19 +7,19 @@ using MySql.Data.MySqlClient;
 
 namespace GestContainer.Modele
 {
-    class Probleme
+    public class Probleme
     {
-        private int _codeProbleme;
+        private string _codeProbleme;
         private string _libelleProbleme;
 
-        public int codeProbleme
+        public string codeProbleme
         {
-            get { return _codeProbleme; }
+            get; set;
         }
 
         public string libelleProbleme
         {
-            get { return _libelleProbleme; }
+            get; set;
         }
 
         public Probleme()
