@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace GestContainer.Modele
 {
-    class Inspection
+    public class Inspection
     {
         private int _numInspection;
         private DateTime _date;
