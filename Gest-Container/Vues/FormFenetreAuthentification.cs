@@ -13,10 +13,22 @@ namespace GestContainer.Vues
 {
     public partial class FormFenetreAuthentification : Form
     {
+        /// <summary>
+        /// Initialisation du formulaire d'authentification
+        /// </summary>
         public FormFenetreAuthentification()
         {
             InitializeComponent();
         }
+
+        // La méthode événement ButtonAuthentification s'enclenche quand l'utilisateur appuye sur le button et effectue :
+        // Un essai avec une variable string qui prend l'adresse du serveur LDAP
+        // Création d'un objet de type DirectoryEntry LDAP qui prend en paramètre du constructeur l'adresse du serveur LDAP, TextBoxIdentifiant et TextBoxPassWord
+        // lance la fenetre principale
+        // ferme la fenetre d'authentification
+        //
+        // Si une erreur pendant l'essai, le récupère et signal à l'utilisateur avec un messagebox.show
+        // rend vide les deux champs des TextBox.
 
         private void ButtonAuthentification_Click(object sender, EventArgs e)
         {
@@ -40,11 +52,15 @@ namespace GestContainer.Vues
             }
         }
         
+        // La méthode événement CheckBoxPassword vérifie l'état changement de son changement
+        // S'il n'est pas coché alors des poitilé affiche a la place du texte claire dans le textBoxPassWord
 
         private void CheckBoxPassword_CheckedChanged(object sender, EventArgs e)
         {
             TextBoxPassWord.UseSystemPasswordChar = !CheckBoxPassword.Checked;
         }
+
+        // Lors du chargement de l'ouverture de la page, active le systemPasswordChar au TextBoxPassWord
 
         private void FormFenetreAuthentification_Load(object sender, EventArgs e)
         {

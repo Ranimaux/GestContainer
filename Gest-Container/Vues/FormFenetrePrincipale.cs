@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace GestContainer.Vues
 {
+
+    // C'est la fenetre principal du programme qui initie les différent formulaire declaration
     public partial class FormFenetrePrincipale : Form
     {
         private Form _mdiChild;

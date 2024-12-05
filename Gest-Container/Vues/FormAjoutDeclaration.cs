@@ -19,7 +19,11 @@ namespace GestContainer.Vues
         {
             InitializeComponent();
         }
-
+        // Boutton Paramètre qui fait le traitement du formulaire en récupérant le champ textBoxCommentaire, checkBoxUrgence et comboBoxProbleme.
+        // fait une vérification que si les champs ne sont pas null ou vide.
+        // envoi les élément saisi, coché et sélectionner par l'utilisateur dans la méthode AjouterUneDeclaration de la class DataBase.
+        // envoi un messageBox au client une comfirmation de l'envoi si pas d'erreur pendant le traitement.
+        // Puis dans tous les cas réinitialise le formulaire.
         private void ButtonAjoutDeclaration_Click(object sender, EventArgs e)
         {
 
@@ -38,6 +42,14 @@ namespace GestContainer.Vues
             ReinitialiserFormulaire();
         }
 
+        // la méthode d'événement du chargement de la page effectue :
+        // En premier lieu, il suspend l'événement au moment de changer l'index du comboBox.
+        // Initialisation du comboBox avec les données de la CollectionProbleme.
+        // l'affichage du DisplayMember (ce que l'utilisateur voit) par le champ "libelleProbleme" venant de la table Probleme de la base de donnée.
+        // l'affichage hors champ des ValueMember (ce que l'utilisateur ne voit pas) par le champ "codeProbleme" venant de la tablae Probleme de la base de donnée.
+        // le choix comboBox est mis vide (-1) pour laissez le choix libre à l'utilisateur.
+        // fin de suspension de l'événement au moment de changer l'index du comboBox.
+
         private void FormAjoutDeclaration_Load(object sender, EventArgs e)
         {
             ComboBoxProbleme.SelectedIndexChanged -= ComboBoxProbleme_SelectedIndexChanged;
@@ -50,6 +62,9 @@ namespace GestContainer.Vues
             ComboBoxProbleme.SelectedIndexChanged += ComboBoxProbleme_SelectedIndexChanged;
 
         }
+
+        // la méthode bool VerificationDuFormulaire()
+        // vérifie les champs saisi par l'utilisateur si sont pas null ou vide sinon il garde la variable bool true.
 
         private bool VerificationDuFormulaire()
         {
@@ -66,12 +81,23 @@ namespace GestContainer.Vues
             return formChecked;
         }
 
+        // La méthode void ReinitialiserFormulaire()
+        // remet a zéro les différents champs du formulaire.
+
         private void ReinitialiserFormulaire()
         {
             textBoxCommentaire.Clear();
             checkBoxUrgence.Checked = false;
             ComboBoxProbleme.SelectedIndex = -1;
         }
+
+        // La méthode événement changement de l'index s'enclenche quand l'utilisateur sélectionne "AUTRE"
+        // Lui demande s'il veut ajouter un nouveau Probleme sinon il revient en arrière et met à zéro le comboBox
+        // S'il dit oui, alors ouvre un formulaire qui permet d'ajouter un Probleme dans la base de données.
+        // les valeurs du formulaire FormAjouterProbleme sont mis dans deux variable string (nouveauLibelle et nouveauCode)
+        // Avec ses deux variables, sont envoyé en paramètre dans la méthode AjouterUnProbleme de la classe DataBase pour l'ajouter dans la base de donnée.
+        // Après réactualise le comboBox pour que l'utilisateur sélectionne le problème qui a saisi en lui précisant que son Probleme a été bien ajouter.
+        
 
         private void ComboBoxProbleme_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -99,10 +125,6 @@ namespace GestContainer.Vues
                             ComboBoxProbleme.SelectedIndex = -1;
 
                             MessageBox.Show("Le problème a été ajouté avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        if(ajoutProbleme.ShowDialog() == DialogResult.Cancel)
-                        {
-                            ComboBoxProbleme.SelectedIndex = -1;
                         }
                     }
                 }

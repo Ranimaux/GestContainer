@@ -21,3 +21,7 @@ E:\pp3\Gest-Container\obj\Debug\GestContainer.Vues.FormConsultationDeclaration.r
 E:\pp3\Gest-Container\obj\Debug\GestContainer.Vues.FormModificationDeclaration.resources
 E:\pp3\Gest-Container\obj\Debug\GestContainer.Vues.FormFenetreAuthentification.resources
 E:\pp3\Gest-Container\obj\Debug\GestContainer.Vues.FormAjouterProbleme.resources
+E:\pp3\Gest-Container\bin\Debug\Gest-Container.exe.manifest
+E:\pp3\Gest-Container\bin\Debug\Gest-Container.application
+E:\pp3\Gest-Container\obj\Debug\Gest-Container.exe.manifest
+E:\pp3\Gest-Container\obj\Debug\Gest-Container.application

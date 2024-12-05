@@ -11,11 +11,23 @@ using System.Windows.Forms;
 namespace GestContainer.Resources
 {
 
+    // Classe statique DataBase pour gérer les interactions avec la base de données MySQL.
+    // Contient des méthodes pour tester la connexion, ouvrir/fermer des connexions, et manipuler les données dans les tables.
     public class DataBase
     {
+        // Déclaration de la connexion MySQL.
+
         private static MySqlConnection connection;
+
+        // Chaîne de connexion contenant les informations de connexion à la base de données.
+
         private static string myConnectionString = "server=srv-mydon.sio.local;"
             + "uid=kben;pwd=25/10/2003;database=mydb_kben; convert zero datetime=True";
+
+        /// <summary>
+        /// Teste la connexion à la base de données en essayant de l'ouvrir.
+        /// </summary>
+        /// <returns>True si la connexion est réussie, False sinon.</returns>
         [STAThread]
         public static bool TestConnection()
         {
@@ -43,6 +55,10 @@ namespace GestContainer.Resources
             }
         }
 
+
+        /// <summary>
+        /// Retourne une instance unique de la connexion à la base de données.
+        /// </summary>
         public static MySqlConnection GetConnection()
         {
             if (connection == null)
@@ -52,6 +68,9 @@ namespace GestContainer.Resources
             return connection;
         }
 
+        /// <summary>
+        /// Ouvre la connexion à la base de données si elle est fermée.
+        /// </summary>
         public static MySqlConnection OpenConnection()
         {
             if (connection == null)
@@ -65,6 +84,9 @@ namespace GestContainer.Resources
             return connection;
         }
 
+        /// <summary>
+        /// Ferme la connexion à la base de données si elle est ouverte.
+        /// </summary>
         public static void CloseConnection()
         {
             if (connection != null && connection.State == System.Data.ConnectionState.Open)
@@ -73,6 +95,10 @@ namespace GestContainer.Resources
             }
         }
 
+        /// <summary>
+        /// Récupère toutes les déclarations depuis la table DECLARATION.
+        /// </summary>
+        /// <returns>Une liste d'objets Declaration.</returns>
         public static List<Declaration> ConsultationDesDeclarations()
         {
             List<Declaration> desDeclarations = new List<Declaration>();
@@ -91,6 +117,8 @@ namespace GestContainer.Resources
 
                 while (reader.Read())
                 {
+                    // Crée un objet Declaration à partir des données lues.
+
                     Declaration uneDeclaration = new Declaration
                     {
                         codeDeclaration = Convert.ToInt32(reader[0].ToString()),
@@ -100,6 +128,7 @@ namespace GestContainer.Resources
                         traite = Convert.ToBoolean(reader[4]),
                         codeProbleme = reader[6].ToString()
                     };
+                    // Ajoute la déclaration à la liste.
 
                     desDeclarations.Add(uneDeclaration);
                 }
@@ -117,6 +146,11 @@ namespace GestContainer.Resources
 
             return desDeclarations;
         }
+
+        /// <summary>
+        /// Ajoute une déclaration dans la table DECLARATION.
+        /// </summary>
+        
         public static void AjouterUneDeclaration(string libelle, bool urgence, string codeP)
         {
             try
@@ -148,6 +182,10 @@ namespace GestContainer.Resources
 
         }
 
+        /// <summary>
+        /// Modifie une déclaration existante dans la table DECLARATION.
+        /// </summary>
+
         public static void ModifierUneDeclaration(int codeDecla, string libelleDecla, bool urgence)
         {
             try
@@ -172,7 +210,10 @@ namespace GestContainer.Resources
                 CloseConnection();
             }
         }
-
+        
+        /// <summary>
+        /// Ajoute un problème dans la table PROBLEME.
+        /// </summary>
         public static void AjouterUnProbleme(string codeP, string libelleP)
         {
             try
