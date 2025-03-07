@@ -112,10 +112,10 @@ namespace GestContainer.Vues
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(477, 333);
+            this.ClientSize = new System.Drawing.Size(1060, 737);
             this.Controls.Add(this.groupBoxFormAuthentification);
             this.Name = "FormFenetreAuthentification";
-            this.Text = "FormFenetreAuthentification";
+            this.Text = "Fenetre Authentification";
             this.Load += new System.EventHandler(this.FormFenetreAuthentification_Load);
             this.groupBoxFormAuthentification.ResumeLayout(false);
             this.groupBoxFormAuthentification.PerformLayout();

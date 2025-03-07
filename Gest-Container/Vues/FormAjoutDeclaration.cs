@@ -10,27 +10,36 @@ using System.Windows.Forms;
 using GestContainer.Modele;
 using GestContainer.Resources;
 using GestContainer.Vues;
+using MetroFramework.Forms;
+using MetroFramework.Controls;
 
 namespace GestContainer.Vues
 {
-    public partial class FormAjoutDeclaration : Form
+    public partial class FormAjoutDeclaration : MetroFramework.Forms.MetroForm
     {
+
         public FormAjoutDeclaration()
         {
             InitializeComponent();
+
+            this.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.StyleManager = metroStyleManagerAjoutDeclaration;
+            this.metroStyleManagerAjoutDeclaration.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroStyleManagerAjoutDeclaration.Style = MetroFramework.MetroColorStyle.Blue;
+            this.StyleManager.Update();
         }
         // Boutton Paramètre qui fait le traitement du formulaire en récupérant le champ textBoxCommentaire, checkBoxUrgence et comboBoxProbleme.
         // fait une vérification que si les champs ne sont pas null ou vide.
         // envoi les élément saisi, coché et sélectionner par l'utilisateur dans la méthode AjouterUneDeclaration de la class DataBase.
         // envoi un messageBox au client une comfirmation de l'envoi si pas d'erreur pendant le traitement.
         // Puis dans tous les cas réinitialise le formulaire.
-        private void ButtonAjoutDeclaration_Click(object sender, EventArgs e)
+        private void metroButtonAjoutDeclaration_Click(object sender, EventArgs e)
         {
+            string libelleDeclaration = metroTextBoxCommentaire.Text;
+            bool urgenceDeclaration = metroCheckBoxUrgence.Checked;
+            string codeProbleme = metroComboBoxProbleme.SelectedValue.ToString();
 
-            string libelleDeclaration = textBoxCommentaire.Text;
-            bool urgenceDeclaration = checkBoxUrgence.Checked;
-            string codeProbleme = ComboBoxProbleme.SelectedValue.ToString();
-            
 
 
             if (VerificationDuFormulaire() != false)
@@ -52,14 +61,14 @@ namespace GestContainer.Vues
 
         private void FormAjoutDeclaration_Load(object sender, EventArgs e)
         {
-            ComboBoxProbleme.SelectedIndexChanged -= ComboBoxProbleme_SelectedIndexChanged;
+            metroComboBoxProbleme.SelectedIndexChanged -= metroComboBoxProbleme_SelectedIndexChanged;
 
-            ComboBoxProbleme.DataSource = Donnees.CollectionProbleme;
-            ComboBoxProbleme.DisplayMember = "libelleProbleme";
-            ComboBoxProbleme.ValueMember = "codeProbleme";
-            ComboBoxProbleme.SelectedIndex = -1;
+            metroComboBoxProbleme.DataSource = Donnees.CollectionProbleme;
+            metroComboBoxProbleme.DisplayMember = "libelleProbleme";
+            metroComboBoxProbleme.ValueMember = "codeProbleme";
+            metroComboBoxProbleme.SelectedIndex = -1;
 
-            ComboBoxProbleme.SelectedIndexChanged += ComboBoxProbleme_SelectedIndexChanged;
+            metroComboBoxProbleme.SelectedIndexChanged += metroComboBoxProbleme_SelectedIndexChanged;
 
         }
 
@@ -70,11 +79,11 @@ namespace GestContainer.Vues
         {
             bool formChecked = true;
 
-            if (textBoxCommentaire.Text.Length < 0 && textBoxCommentaire.Text.Length > 100)
+            if (metroTextBoxCommentaire.Text.Length < 0 && metroTextBoxCommentaire.Text.Length > 100)
             {
                 MessageBox.Show("Le champ commentaire ne doit vide ou dépasser 100 Caractère!", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxCommentaire.Text = "";
-                textBoxCommentaire.Focus();
+                metroTextBoxCommentaire.Text = "";
+                metroTextBoxCommentaire.Focus();
                 formChecked = false;
             }
 
@@ -86,9 +95,9 @@ namespace GestContainer.Vues
 
         private void ReinitialiserFormulaire()
         {
-            textBoxCommentaire.Clear();
-            checkBoxUrgence.Checked = false;
-            ComboBoxProbleme.SelectedIndex = -1;
+            metroTextBoxCommentaire.Clear();
+            metroCheckBoxUrgence.Checked = false;
+            metroComboBoxProbleme.SelectedIndex = -1;
         }
 
         // La méthode événement changement de l'index s'enclenche quand l'utilisateur sélectionne "AUTRE"
@@ -97,17 +106,14 @@ namespace GestContainer.Vues
         // les valeurs du formulaire FormAjouterProbleme sont mis dans deux variable string (nouveauLibelle et nouveauCode)
         // Avec ses deux variables, sont envoyé en paramètre dans la méthode AjouterUnProbleme de la classe DataBase pour l'ajouter dans la base de donnée.
         // Après réactualise le comboBox pour que l'utilisateur sélectionne le problème qui a saisi en lui précisant que son Probleme a été bien ajouter.
-        
-
-        private void ComboBoxProbleme_SelectedIndexChanged(object sender, EventArgs e)
+        private void metroComboBoxProbleme_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            if (ComboBoxProbleme.SelectedItem is Probleme probleme && probleme.libelleProbleme == "AUTRE")
+            if (metroComboBoxProbleme.SelectedItem is Probleme probleme && probleme.libelleProbleme == "AUTRE")
             {
 
                 DialogResult result = MessageBox.Show("Vous avez sélectionné 'AUTRE'. Souhaitez-vous ajouter un nouveau problème ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if(result == DialogResult.Yes)
+                if (result == DialogResult.Yes)
                 {
                     using (FormAjouterProbleme ajoutProbleme = new FormAjouterProbleme())
                     {
@@ -116,13 +122,13 @@ namespace GestContainer.Vues
                             string nouveauLibelle = ajoutProbleme.libelleProbleme;
                             string nouveauCode = ajoutProbleme.codeProbleme;
 
-                            
+
                             DataBase.AjouterUnProbleme(nouveauCode, nouveauLibelle);
 
-                            
-                            Donnees.CollectionProbleme = null; 
-                            ComboBoxProbleme.DataSource = Donnees.CollectionProbleme;
-                            ComboBoxProbleme.SelectedIndex = -1;
+
+                            Donnees.CollectionProbleme = null;
+                            metroComboBoxProbleme.DataSource = Donnees.CollectionProbleme;
+                            metroComboBoxProbleme.SelectedIndex = -1;
 
                             MessageBox.Show("Le problème a été ajouté avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -130,12 +136,25 @@ namespace GestContainer.Vues
                 }
                 else
                 {
-                    ComboBoxProbleme.SelectedIndex = -1;
+                    metroComboBoxProbleme.SelectedIndex = -1;
                 }
 
-                    
-                
+
+
             }
         }
+
+        private void AddControl()
+        {
+            var labelCommentaireDeclaration = new MetroLabel
+            {
+                Text = "Commentaire Déclaration : ",
+                FontSize = MetroFramework.MetroLabelSize.Medium,
+                FontWeight = MetroFramework.MetroLabelWeight.Bold
+            };
+            this.Controls.Add(labelCommentaireDeclaration);
+        }
+
+        
     }
 }

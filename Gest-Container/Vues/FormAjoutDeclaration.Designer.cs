@@ -29,112 +29,186 @@ namespace GestContainer.Vues
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.ButtonAjoutDeclaration = new System.Windows.Forms.Button();
-            this.textBoxCommentaire = new System.Windows.Forms.TextBox();
-            this.checkBoxUrgence = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ComboBoxProbleme = new System.Windows.Forms.ComboBox();
+            this.components = new System.ComponentModel.Container();
+            this.metroTextBoxCommentaire = new MetroFramework.Controls.MetroTextBox();
+            this.metroCheckBoxUrgence = new MetroFramework.Controls.MetroCheckBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBoxProbleme = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroButtonAjoutDeclaration = new MetroFramework.Controls.MetroButton();
+            this.metroStyleManagerAjoutDeclaration = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerAjoutDeclaration)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // metroTextBoxCommentaire
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 24);
-            this.label1.MinimumSize = new System.Drawing.Size(150, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 50);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Commentaire déclaration :";
             // 
-            // ButtonAjoutDeclaration
             // 
-            this.ButtonAjoutDeclaration.Location = new System.Drawing.Point(551, 372);
-            this.ButtonAjoutDeclaration.Name = "ButtonAjoutDeclaration";
-            this.ButtonAjoutDeclaration.Size = new System.Drawing.Size(75, 23);
-            this.ButtonAjoutDeclaration.TabIndex = 1;
-            this.ButtonAjoutDeclaration.Text = "Envoyer";
-            this.ButtonAjoutDeclaration.UseVisualStyleBackColor = true;
-            this.ButtonAjoutDeclaration.Click += new System.EventHandler(this.ButtonAjoutDeclaration_Click);
             // 
-            // textBoxCommentaire
+            this.metroTextBoxCommentaire.CustomButton.Image = null;
+            this.metroTextBoxCommentaire.CustomButton.Location = new System.Drawing.Point(125, 1);
+            this.metroTextBoxCommentaire.CustomButton.Name = "";
+            this.metroTextBoxCommentaire.CustomButton.Size = new System.Drawing.Size(73, 79);
+            this.metroTextBoxCommentaire.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBoxCommentaire.CustomButton.TabIndex = 1;
+            this.metroTextBoxCommentaire.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBoxCommentaire.CustomButton.UseSelectable = true;
+            this.metroTextBoxCommentaire.CustomButton.Visible = false;
+            this.metroTextBoxCommentaire.Lines = new string[0];
+            this.metroTextBoxCommentaire.Location = new System.Drawing.Point(194, 139);
+            this.metroTextBoxCommentaire.MaxLength = 100;
+            this.metroTextBoxCommentaire.Name = "metroTextBoxCommentaire";
+            this.metroTextBoxCommentaire.PasswordChar = '\0';
+            this.metroTextBoxCommentaire.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBoxCommentaire.SelectedText = "";
+            this.metroTextBoxCommentaire.SelectionLength = 0;
+            this.metroTextBoxCommentaire.SelectionStart = 0;
+            this.metroTextBoxCommentaire.ShortcutsEnabled = true;
+            this.metroTextBoxCommentaire.Size = new System.Drawing.Size(199, 75);
+            this.metroTextBoxCommentaire.TabIndex = 10;
+            this.metroTextBoxCommentaire.UseSelectable = true;
+            this.metroTextBoxCommentaire.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBoxCommentaire.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            this.textBoxCommentaire.Location = new System.Drawing.Point(218, 24);
-            this.textBoxCommentaire.Multiline = true;
-            this.textBoxCommentaire.Name = "textBoxCommentaire";
-            this.textBoxCommentaire.Size = new System.Drawing.Size(305, 202);
-            this.textBoxCommentaire.TabIndex = 2;
+            // metroCheckBoxUrgence
             // 
-            // checkBoxUrgence
+            this.metroCheckBoxUrgence.AutoSize = true;
+            this.metroCheckBoxUrgence.BackColor = System.Drawing.Color.Transparent;
+            this.metroCheckBoxUrgence.ForeColor = System.Drawing.Color.Gold;
+            this.metroCheckBoxUrgence.Location = new System.Drawing.Point(259, 251);
+            this.metroCheckBoxUrgence.Name = "metroCheckBoxUrgence";
+            this.metroCheckBoxUrgence.Size = new System.Drawing.Size(67, 15);
+            this.metroCheckBoxUrgence.TabIndex = 11;
+            this.metroCheckBoxUrgence.Text = "Urgence";
+            this.metroCheckBoxUrgence.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroCheckBoxUrgence.UseSelectable = true;
             // 
-            this.checkBoxUrgence.AutoSize = true;
-            this.checkBoxUrgence.Location = new System.Drawing.Point(218, 268);
-            this.checkBoxUrgence.Margin = new System.Windows.Forms.Padding(8);
-            this.checkBoxUrgence.MinimumSize = new System.Drawing.Size(10, 10);
-            this.checkBoxUrgence.Name = "checkBoxUrgence";
-            this.checkBoxUrgence.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxUrgence.TabIndex = 5;
-            this.checkBoxUrgence.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBoxUrgence.UseVisualStyleBackColor = true;
+            // metroComboBox1
             // 
-            // label2
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(34, 251);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(199, 29);
+            this.metroComboBox1.TabIndex = 12;
+            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.Visible = false;
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 268);
-            this.label2.MinimumSize = new System.Drawing.Size(150, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 50);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Urgence :";
+            // metroComboBoxProbleme
             // 
-            // label3
+            this.metroComboBoxProbleme.BackColor = System.Drawing.Color.White;
+            this.metroComboBoxProbleme.FormattingEnabled = true;
+            this.metroComboBoxProbleme.ItemHeight = 23;
+            this.metroComboBoxProbleme.Location = new System.Drawing.Point(356, 251);
+            this.metroComboBoxProbleme.Name = "metroComboBoxProbleme";
+            this.metroComboBoxProbleme.Size = new System.Drawing.Size(199, 29);
+            this.metroComboBoxProbleme.TabIndex = 13;
+            this.metroComboBoxProbleme.UseSelectable = true;
+            this.metroComboBoxProbleme.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxProbleme_SelectedIndexChanged);
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 322);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Probleme :";
+            // metroLabel2
             // 
-            // ComboBoxProbleme
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.BackColor = System.Drawing.Color.Black;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.ForeColor = System.Drawing.Color.Gold;
+            this.metroLabel2.Location = new System.Drawing.Point(356, 227);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(173, 19);
+            this.metroLabel2.TabIndex = 14;
+            this.metroLabel2.Text = "Liste Probleme :              ";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel2.UseCustomForeColor = true;
             // 
-            this.ComboBoxProbleme.FormattingEnabled = true;
-            this.ComboBoxProbleme.Location = new System.Drawing.Point(218, 322);
-            this.ComboBoxProbleme.Name = "ComboBoxProbleme";
-            this.ComboBoxProbleme.Size = new System.Drawing.Size(305, 21);
-            this.ComboBoxProbleme.TabIndex = 8;
-            this.ComboBoxProbleme.SelectedIndexChanged += new System.EventHandler(this.ComboBoxProbleme_SelectedIndexChanged);
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.BackColor = System.Drawing.Color.Black;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.ForeColor = System.Drawing.Color.Gold;
+            this.metroLabel3.Location = new System.Drawing.Point(35, 227);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(196, 19);
+            this.metroLabel3.TabIndex = 15;
+            this.metroLabel3.Text = "Liste Container :                    ";
+            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel3.UseCustomForeColor = true;
+            this.metroLabel3.Visible = false;
+            // 
+            // metroButtonAjoutDeclaration
+            // 
+            this.metroButtonAjoutDeclaration.BackColor = System.Drawing.Color.Gold;
+            this.metroButtonAjoutDeclaration.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButtonAjoutDeclaration.ForeColor = System.Drawing.Color.Gold;
+            this.metroButtonAjoutDeclaration.Location = new System.Drawing.Point(480, 333);
+            this.metroButtonAjoutDeclaration.Name = "metroButtonAjoutDeclaration";
+            this.metroButtonAjoutDeclaration.Size = new System.Drawing.Size(75, 25);
+            this.metroButtonAjoutDeclaration.TabIndex = 16;
+            this.metroButtonAjoutDeclaration.Text = "Envoyer";
+            this.metroButtonAjoutDeclaration.UseSelectable = true;
+            this.metroButtonAjoutDeclaration.Click += new System.EventHandler(this.metroButtonAjoutDeclaration_Click);
+            // 
+            // metroStyleManagerAjoutDeclaration
+            // 
+            this.metroStyleManagerAjoutDeclaration.Owner = null;
+            this.metroStyleManagerAjoutDeclaration.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.Black;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.ForeColor = System.Drawing.Color.Gold;
+            this.metroLabel1.Location = new System.Drawing.Point(194, 115);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(189, 19);
+            this.metroLabel1.TabIndex = 17;
+            this.metroLabel1.Text = "Commentaire Déclaration :";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel1.UseCustomForeColor = true;
             // 
             // FormAjoutDeclaration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(672, 439);
-            this.Controls.Add(this.ComboBoxProbleme);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBoxUrgence);
-            this.Controls.Add(this.textBoxCommentaire);
-            this.Controls.Add(this.ButtonAjoutDeclaration);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(581, 382);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.metroButtonAjoutDeclaration);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroComboBoxProbleme);
+            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.metroCheckBoxUrgence);
+            this.Controls.Add(this.metroTextBoxCommentaire);
+            this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Gold;
             this.Name = "FormAjoutDeclaration";
+            this.Padding = new System.Windows.Forms.Padding(20, 65, 20, 22);
             this.Text = "Déclarer un incident";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TransparencyKey = System.Drawing.Color.Gold;
             this.Load += new System.EventHandler(this.FormAjoutDeclaration_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerAjoutDeclaration)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ButtonAjoutDeclaration;
-        private System.Windows.Forms.TextBox textBoxCommentaire;
-        private System.Windows.Forms.CheckBox checkBoxUrgence;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox ComboBoxProbleme;
+        private MetroFramework.Controls.MetroTextBox metroTextBoxCommentaire;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox metroComboBoxProbleme;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroButton metroButtonAjoutDeclaration;
+        private MetroFramework.Components.MetroStyleManager metroStyleManagerAjoutDeclaration;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBoxUrgence;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

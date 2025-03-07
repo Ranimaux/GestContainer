@@ -21,7 +21,7 @@ namespace GestContainer.Resources
 
         // Chaîne de connexion contenant les informations de connexion à la base de données.
 
-        private static string myConnectionString = "server=srv-mydon.sio.local;"
+        private static string myConnectionString = "server=217.167.171.227;"
             + "uid=kben;pwd=25/10/2003;database=mydb_kben; convert zero datetime=True";
 
         /// <summary>
