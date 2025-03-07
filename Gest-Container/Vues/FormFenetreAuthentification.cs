@@ -93,7 +93,7 @@ namespace GestContainer.Vues
             //}
             //catch (LdapException ex)
             //{
-            //    Console.WriteLine($"LDAP Exception: {ex.Message}");
+            //    Console.WriteLine($"LDAP Exception: {ex.Message}");jhh
             //    Console.WriteLine($"Error Code: {ex.ErrorCode}");
             //    Console.WriteLine($"Server Message: {ex.ServerErrorMessage}");
             //}

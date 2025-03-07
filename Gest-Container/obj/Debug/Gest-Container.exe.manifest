@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gest-Container.exe" size="128400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gest-Container.exe" size="127888">
       <assemblyIdentity name="Gest-Container" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>r4L8A8ux1WG2oBOqvYy5s9CLPcpVwWbff2e1qsb0lcg=</dsig:DigestValue>
+        <dsig:DigestValue>gmT8xn0UiO8bQ1HPacQBuvLizYa9vHFUAIGG96QxBRM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

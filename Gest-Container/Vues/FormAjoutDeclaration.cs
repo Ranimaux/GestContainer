@@ -23,9 +23,9 @@ namespace GestContainer.Vues
             InitializeComponent();
 
             this.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.StyleManager = metroStyleManagerAjoutDeclaration;
-            this.metroStyleManagerAjoutDeclaration.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroStyleManagerAjoutDeclaration.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroStyleManagerAjoutDeclaration.Style = MetroFramework.MetroColorStyle.Blue;
             this.StyleManager.Update();
         }
