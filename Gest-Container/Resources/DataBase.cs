@@ -10,7 +10,8 @@ using System.Windows.Forms;
 
 namespace GestContainer.Resources
 {
-
+    // host : srv-mydon.sio.local
+    // ipHost : 217.167.171.227
     // Classe statique DataBase pour gérer les interactions avec la base de données MySQL.
     // Contient des méthodes pour tester la connexion, ouvrir/fermer des connexions, et manipuler les données dans les tables.
     public class DataBase
@@ -20,8 +21,8 @@ namespace GestContainer.Resources
         private static MySqlConnection connection;
 
         // Chaîne de connexion contenant les informations de connexion à la base de données.
-
-        private static string myConnectionString = "server=217.167.171.227;"
+        
+        private static string myConnectionString = "server=srv-mydon.sio.local;"
             + "uid=kben;pwd=25/10/2003;database=mydb_kben; convert zero datetime=True";
 
         /// <summary>
