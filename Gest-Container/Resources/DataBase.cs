@@ -162,11 +162,11 @@ namespace GestContainer.Resources
                     MySqlCommand cmd = new MySqlCommand();
                     cmd.Connection = connection;
                     cmd.CommandText = "INSERT INTO DECLARATION(commentaireDeclaration, dateDeclaration, urgence, codeProbleme) VALUES(@commentaireDeclaration, @dateDeclaration, @urgence, @codeProbleme)";
-                    cmd.Prepare();
                     cmd.Parameters.AddWithValue("@commentaireDeclaration", libelle);
                     cmd.Parameters.AddWithValue("@dateDeclaration", DateTime.Now);
                     cmd.Parameters.AddWithValue("@urgence", urgence);
                     cmd.Parameters.AddWithValue("@codeProbleme", codeP);
+                    cmd.Prepare();
                     cmd.ExecuteNonQuery();
 
 
@@ -196,10 +196,10 @@ namespace GestContainer.Resources
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = connection;
                 cmd.CommandText = "UPDATE DECLARATION SET commentaireDeclaration = @commentaireDeclaration, urgence = @urgence Where codeDeclaration = @codeDeclaration;";
-                cmd.Prepare();
                 cmd.Parameters.AddWithValue("@commentaireDeclaration", libelleDecla);
                 cmd.Parameters.AddWithValue("@urgence", urgence);
                 cmd.Parameters.AddWithValue("@codeDeclaration", codeDecla);
+                cmd.Prepare();
                 cmd.ExecuteNonQuery();
             }
             catch (MySqlException ex)
@@ -224,9 +224,9 @@ namespace GestContainer.Resources
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = connection;
                 cmd.CommandText = "INSERT INTO PROBLEME(codeProbleme, libelleProbleme) VALUES(@codeProbleme, @libelleProbleme)";
-                cmd.Prepare();
                 cmd.Parameters.AddWithValue("@codeProbleme", codeP);
                 cmd.Parameters.AddWithValue("@libelleProbleme", libelleP);
+                cmd.Prepare();
                 cmd.ExecuteNonQuery();
 
             }
