@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestContainer", "Gest-Container\GestContainer.csproj", "{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9519781-FB0C-4A4E-A2BB-618B5A62FE48}
+	EndGlobalSection
+EndGlobal

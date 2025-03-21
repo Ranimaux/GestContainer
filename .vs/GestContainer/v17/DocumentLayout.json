@@ -1,0 +1,287 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\pp3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrateur\\AppData\\Local\\Temp\\32886f2d-9352-4eb1-8285-1961107fba7f_lam-config (1).zip.a7f\\lam-config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|d:\\pp3\\gest-container\\vues\\formfenetreauthentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formfenetreauthentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\resources\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\resources\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formmodificationdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formmodificationdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formmodificationdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formmodificationdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formconsultationdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formconsultationdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formconsultationdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formconsultationdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formfenetreauthentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formfenetreauthentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\modele\\container.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\modele\\container.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\resources\\donnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\resources\\donnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formajouterprobleme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formajouterprobleme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formajouterprobleme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formajouterprobleme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formajoutdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formajoutdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formajoutdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formajoutdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\vues\\formfenetreprincipale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\vues\\formfenetreprincipale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|D:\\pp3\\gest-container\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC1C1B47-B9DB-49D7-950F-DB1D4E84714D}|Gest-Container\\GestContainer.csproj|solutionrelative:gest-container\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|GestContainer||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lam-config.json",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\AppData\\Local\\Temp\\32886f2d-9352-4eb1-8285-1961107fba7f_lam-config (1).zip.a7f\\lam-config.json",
+              "ToolTip": "C:\\Users\\Administrateur\\AppData\\Local\\Temp\\32886f2d-9352-4eb1-8285-1961107fba7f_lam-config (1).zip.a7f\\lam-config.json [Lecture seule]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAByBgAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-29T14:23:26.819Z",
+              "EditorCaption": " [Lecture seule]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormModificationDeclaration.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormModificationDeclaration.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormModificationDeclaration.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormModificationDeclaration.cs*",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormModificationDeclaration.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:25:18.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Container.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Modele\\Container.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Modele\\Container.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Modele\\Container.cs",
+              "RelativeToolTip": "Gest-Container\\Modele\\Container.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:24:05.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Donnees.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Resources\\Donnees.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Resources\\Donnees.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Resources\\Donnees.cs",
+              "RelativeToolTip": "Gest-Container\\Resources\\Donnees.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:23:47.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormAjouterProbleme.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormAjouterProbleme.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormAjouterProbleme.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormAjouterProbleme.cs",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormAjouterProbleme.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:18:22.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormAjouterProbleme.cs [Design]",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormAjouterProbleme.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormAjouterProbleme.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormAjouterProbleme.cs [Design]",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormAjouterProbleme.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:18:18.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormAjoutDeclaration.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormAjoutDeclaration.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormAjoutDeclaration.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormAjoutDeclaration.cs",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormAjoutDeclaration.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:17:16.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Program.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Program.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Program.cs",
+              "RelativeToolTip": "Gest-Container\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:16:36.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormFenetrePrincipale.cs [Design]",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormFenetrePrincipale.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormFenetrePrincipale.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormFenetrePrincipale.cs [Design]",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormFenetrePrincipale.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:44:12.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GestContainer",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\GestContainer.csproj",
+              "RelativeDocumentMoniker": "Gest-Container\\GestContainer.csproj",
+              "ToolTip": "D:\\pp3\\Gest-Container\\GestContainer.csproj",
+              "RelativeToolTip": "Gest-Container\\GestContainer.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-11T14:19:56.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormFenetreAuthentification.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormFenetreAuthentification.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormFenetreAuthentification.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormFenetreAuthentification.cs",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormFenetreAuthentification.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowFAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T11:10:38.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormFenetreAuthentification.cs [Design]",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormFenetreAuthentification.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormFenetreAuthentification.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormFenetreAuthentification.cs [Design]",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormFenetreAuthentification.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T11:10:35.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormAjoutDeclaration.cs [Design]",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormAjoutDeclaration.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormAjoutDeclaration.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormAjoutDeclaration.cs [Design]",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormAjoutDeclaration.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T09:15:26.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormModificationDeclaration.cs [Design]",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormModificationDeclaration.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormModificationDeclaration.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormModificationDeclaration.cs [Design]*",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormModificationDeclaration.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:49:53.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataBase.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Resources\\DataBase.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Resources\\DataBase.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Resources\\DataBase.cs",
+              "RelativeToolTip": "Gest-Container\\Resources\\DataBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:49:03.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormConsultationDeclaration.cs",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormConsultationDeclaration.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormConsultationDeclaration.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormConsultationDeclaration.cs",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormConsultationDeclaration.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowBgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:38:21.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormConsultationDeclaration.cs [Design]",
+              "DocumentMoniker": "D:\\pp3\\Gest-Container\\Vues\\FormConsultationDeclaration.cs",
+              "RelativeDocumentMoniker": "Gest-Container\\Vues\\FormConsultationDeclaration.cs",
+              "ToolTip": "D:\\pp3\\Gest-Container\\Vues\\FormConsultationDeclaration.cs [Design]",
+              "RelativeToolTip": "Gest-Container\\Vues\\FormConsultationDeclaration.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:38:18.035Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
