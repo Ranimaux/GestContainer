@@ -21,9 +21,13 @@ namespace GestContainer.Resources
         private static MySqlConnection connection;
 
         // Chaîne de connexion contenant les informations de connexion à la base de données.
-        
-        private static string myConnectionString = "server=srv-mydon.sio.local;"
-            + "uid=kben;pwd=25/10/2003;database=mydb_kben; convert zero datetime=True";
+
+         //private static string myConnectionString = "server=srv-mydon.sio.local;"
+         //   + "uid=kben;pwd=25/10/2003;database=mydb_kben; convert zero datetime=True";
+
+        private static string myConnectionString = "server=172.31.2.110;"
+            + "uid=jhuon;pwd=@Xazerty1;database=db_contenaires; convert zero datetime=True";
+
 
         /// <summary>
         /// Teste la connexion à la base de données en essayant de l'ouvrir.
