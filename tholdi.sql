@@ -1,7 +1,7 @@
 ## File SQL for Application
 
 create table PROBLEME (
-codeProbleme char(4) AUTO_INCREMENT,
+codeProbleme char(4),
 libelleProbleme varchar(40),
 constraint PK_codePB primary key nonclustered (codeProbleme)
 )engine=innodb;
@@ -15,9 +15,9 @@ constraint PK_numCont primary key nonclustered (numContainer)
 )engine=innodb;
 
 create table DECLARATION (
-codeDeclaration int (6) NOT NULL,
+codeDeclaration int (6) AUTO_INCREMENT,
 commentaireDeclaration varchar (100),
-dateDeclaration date,
+dateDeclaration date not null,
 urgence bool DEFAULT FALSE,
 traité bool DEFAULT FALSE,
 numContainer int (6),
