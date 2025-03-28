@@ -37,9 +37,10 @@ namespace GestContainer.Vues
         {
             try
             {
-                string adresseAuthentification = "LDAP://" + "sio.local/" + "OU=OU-SLAM,"
-                +"OU=OU-Etudiants,DC=sio,DC=local";
-
+                //string adresseAuthentification = "LDAP://" + "sio.local/" + "OU=OU-SLAM,"
+                //+"OU=OU-Etudiants,DC=sio,DC=local";
+                string adresseAuthentification = "LDAP://" + "172.31.2.10/" + "OU=OU-Paris,"
+                +"OU=OU-Developpement,DC=tholdi,DC=com";
 
                 DirectoryEntry Ldap = new DirectoryEntry
                     (
