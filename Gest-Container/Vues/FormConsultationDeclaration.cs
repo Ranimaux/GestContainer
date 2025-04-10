@@ -31,11 +31,17 @@ namespace GestContainer.Vues
         /// </summary>
         private void FormConsultationDeclaration_Load(object sender, EventArgs e)
         {
+            RefreshCollectionDeclaration();
+
+            dataGridViewListDeclaration.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewListDeclaration.MultiSelect = false;
+            dataGridViewListDeclaration.ReadOnly = true;
+            dataGridViewListDeclaration.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             // Réinitialise la source de données du DataGridView.
-            dataGridViewListDeclaration.DataSource = null;
+            //dataGridViewListDeclaration.DataSource = null;
 
             // Lie la collection de déclarations à afficher au DataGridView.
-            dataGridViewListDeclaration.DataSource = Donnees.CollectionDeclaration;
+            //dataGridViewListDeclaration.DataSource = Donnees.CollectionDeclaration;
         }
 
         /// <summary>

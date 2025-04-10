@@ -38,17 +38,32 @@ namespace GestContainer.Vues
         {
             string libelleDeclaration = metroTextBoxCommentaire.Text;
             bool urgenceDeclaration = metroCheckBoxUrgence.Checked;
+            if(metroComboBoxProbleme.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veulliez sélectionner un problème dans la liste.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                metroComboBoxProbleme.Focus();
+                return;
+            }
             string codeProbleme = metroComboBoxProbleme.SelectedValue.ToString();
 
 
 
             if (VerificationDuFormulaire() != false)
             {
-
-                DataBase.AjouterUneDeclaration(libelleDeclaration, urgenceDeclaration, codeProbleme);
-                MessageBox.Show("La déclaration a été envoyé avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try 
+	            {	        
+		            DataBase.AjouterUneDeclaration(libelleDeclaration, urgenceDeclaration, codeProbleme);
+                    MessageBox.Show("La déclaration a été envoyé avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ReinitialiserFormulaire();
+	            }
+	            catch (Exception ex)
+	            {
+                    MessageBox.Show("Une erreur est sevenue lors de l'ajout : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+	            }
+                
+                
+                
             }
-            ReinitialiserFormulaire();
         }
 
         // la méthode d'événement du chargement de la page effectue :
@@ -79,7 +94,7 @@ namespace GestContainer.Vues
         {
             bool formChecked = true;
 
-            if (metroTextBoxCommentaire.Text.Length < 0 && metroTextBoxCommentaire.Text.Length > 100)
+            if (string.IsNullOrWhiteSpace(metroTextBoxCommentaire.Text) && metroTextBoxCommentaire.Text.Length > 100)
             {
                 MessageBox.Show("Le champ commentaire ne doit vide ou dépasser 100 Caractère!", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 metroTextBoxCommentaire.Text = "";
@@ -126,8 +141,11 @@ namespace GestContainer.Vues
                             DataBase.AjouterUnProbleme(nouveauCode, nouveauLibelle);
 
 
-                            Donnees.CollectionProbleme = null;
+                            Donnees.CollectionProbleme = DataBase.ConsultationDesProbleme();
+                            metroComboBoxProbleme.DataSource = null;
                             metroComboBoxProbleme.DataSource = Donnees.CollectionProbleme;
+                            metroComboBoxProbleme.DisplayMember = "libelleProbleme";
+                            metroComboBoxProbleme.ValueMember = "codeProbleme";
                             metroComboBoxProbleme.SelectedIndex = -1;
 
                             MessageBox.Show("Le problème a été ajouté avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -155,6 +173,6 @@ namespace GestContainer.Vues
             this.Controls.Add(labelCommentaireDeclaration);
         }
 
-        
+
     }
 }
