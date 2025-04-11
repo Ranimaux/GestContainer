@@ -22,11 +22,11 @@ namespace GestContainer.Resources
 
         // Chaîne de connexion contenant les informations de connexion à la base de données.
 
-         //private static string myConnectionString = "server=srv-mydon.sio.local;"
-         //   + "uid=kben;pwd=25/10/2003;database=mydb_kben; convert zero datetime=True";
+        private static string myConnectionString = "server=srv-mydon.sio.local;"
+           + "uid=jhuo;pwd=22/09/2003;database=mydb_jhuo; convert zero datetime=True";
 
-        private static string myConnectionString = "server=172.31.2.110;"
-            + "uid=jhuon;pwd=@Xazerty1;database=db_contenaires; convert zero datetime=True";
+        //private static string myConnectionString = "server=172.31.2.110;"
+        //    + "uid=jhuo;pwd=@Xazerty1;database=db_contenaires; convert zero datetime=True";
 
 
         /// <summary>
@@ -215,6 +215,53 @@ namespace GestContainer.Resources
                 CloseConnection();
             }
         }
+
+        /// <summary>
+        /// Récupère toutes les Problème depuis la table PROBLEME.
+        /// </summary>
+        /// <returns>Une liste d'objets Probleme.</returns>
+        public static List<Probleme> ConsultationDesProbleme()
+        {
+            
+            List<Probleme> desProblemes = new List<Probleme>();
+
+            try
+            {
+                MySqlConnection connection = OpenConnection();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "SELECT * FROM PROBLEME";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Crée une instance Probleme à partir des données lues.
+
+                    Probleme unProbleme = new Probleme
+                            {
+                                codeProbleme = reader[0].ToString(),
+                                libelleProbleme = reader[1].ToString()
+                            };
+                    // Ajoute le probleme à la liste.
+
+                    desProblemes.Add(unProbleme);
+                }
+
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur lors de la récupération de la table Probleme : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                CloseConnection(); 
+            }
+
+            return desProblemes;
+        }
         
         /// <summary>
         /// Ajoute un problème dans la table PROBLEME.
@@ -242,6 +289,109 @@ namespace GestContainer.Resources
             {
                 CloseConnection();
             }
+        }
+
+        public static void AjouterUneDemandeExpertise(DateTime dateConstat, string commentaireConstat, string contactResp, int codeDeclaration)
+        {
+            try
+            {
+                MySqlConnection connection = OpenConnection();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "INSERT INTO EXPERTISE(dateConstat, commentaireConstatation, contactResponsable, codeDeclaration) values(@dateConstat, @commentaireConstatation, "
+                    + "@contactResponsable, @codeDeclaration)";
+                cmd.Parameters.AddWithValue("@dateConstat", dateConstat);
+                cmd.Parameters.AddWithValue("@commentaireConstatation", commentaireConstat);
+                cmd.Parameters.AddWithValue("@contactResponsable", contactResp);
+                cmd.Parameters.AddWithValue("@codeDeclaration", codeDeclaration);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+
+            } catch (MySqlException ex)
+            {
+                MessageBox.Show("Une erreur de traitement lors de l'envoi d'une demande expertise :" + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public static List<Expertise> ConsultationDesDemandeExpertise()
+        {
+
+            List<Expertise> desDemandeExpertise = new List<Expertise>();
+
+            try
+            {
+                MySqlConnection connection = OpenConnection();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "SELECT * FROM EXPERTISE";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Crée une instance Expertise à partir des données lues.
+
+                    Expertise uneDemandeExpertise = new Expertise
+                    {
+                        numExpertise = Convert.ToInt32(reader[0].ToString()),
+                        dateConstat = reader.GetDateTime(1),
+                        commentaireConstatation = reader[2].ToString(),
+                        contactResponsable = reader[3].ToString(),
+                        status = reader[4].ToString(),
+                        codeDeclaration = Convert.ToInt32(reader[5].ToString()),
+                        dateCreation = reader.GetDateTime(6)
+                    };
+                    // Ajoute la demande expertise à la liste.
+
+                    desDemandeExpertise.Add(uneDemandeExpertise);
+                }
+
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur lors de la récupération de la table Expertise : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
+            return desDemandeExpertise;
+        }
+        public static void ModifierDemandeExpertise(int numExpertise, DateTime dateConstat, string commConstat, string contactResp, int codeDecla)
+        {
+            try
+            {
+                connection = OpenConnection();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "UPDATE EXPERTISE set dateConstat = @dateConstat, commentaireConstatation = @commentaireConstatation, "
+                    + "contactResponsable = @contactResponsable, codeDeclaration = @codeDeclaration WHERE numExpertise = @numExpertise";
+                cmd.Parameters.AddWithValue("@dateConstat", dateConstat);
+                cmd.Parameters.AddWithValue("@commentaireConstatation", commConstat);
+                cmd.Parameters.AddWithValue("@contactResponsable", contactResp);
+                cmd.Parameters.AddWithValue("@codeDeclaration", codeDecla);
+                cmd.Parameters.AddWithValue("@numExpertise", numExpertise);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("Erreur lors de la modification de la table Expertise : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
         }
     }
 }

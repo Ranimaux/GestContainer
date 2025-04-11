@@ -33,6 +33,9 @@ namespace GestContainer.Vues
             this.dECLARATIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeclarerUnIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsulterLesIncidentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXPERTISEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUneExpertiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulterLesDemandesExpertiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipalMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +43,8 @@ namespace GestContainer.Vues
             // 
             this.menuPrincipalMenuStrip.BackgroundImage = global::GestContainer.Properties.Resources.logo_tholdi2;
             this.menuPrincipalMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dECLARATIONToolStripMenuItem});
+            this.dECLARATIONToolStripMenuItem,
+            this.eXPERTISEToolStripMenuItem});
             this.menuPrincipalMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipalMenuStrip.Name = "menuPrincipalMenuStrip";
             this.menuPrincipalMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -54,7 +58,7 @@ namespace GestContainer.Vues
             this.DeclarerUnIncidentToolStripMenuItem,
             this.ConsulterLesIncidentsToolStripMenuItem});
             this.dECLARATIONToolStripMenuItem.Name = "dECLARATIONToolStripMenuItem";
-            this.dECLARATIONToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.dECLARATIONToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.dECLARATIONToolStripMenuItem.Text = "DECLARATION";
             // 
             // DeclarerUnIncidentToolStripMenuItem
@@ -71,6 +75,29 @@ namespace GestContainer.Vues
             this.ConsulterLesIncidentsToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.ConsulterLesIncidentsToolStripMenuItem.Text = "Consulter les incidents";
             this.ConsulterLesIncidentsToolStripMenuItem.Click += new System.EventHandler(this.ConsulterLesIncidentsToolStripMenuItem_Click);
+            // 
+            // eXPERTISEToolStripMenuItem
+            // 
+            this.eXPERTISEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterUneExpertiseToolStripMenuItem,
+            this.consulterLesDemandesExpertiseToolStripMenuItem});
+            this.eXPERTISEToolStripMenuItem.Name = "eXPERTISEToolStripMenuItem";
+            this.eXPERTISEToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.eXPERTISEToolStripMenuItem.Text = "EXPERTISE";
+            // 
+            // ajouterUneExpertiseToolStripMenuItem
+            // 
+            this.ajouterUneExpertiseToolStripMenuItem.Name = "ajouterUneExpertiseToolStripMenuItem";
+            this.ajouterUneExpertiseToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.ajouterUneExpertiseToolStripMenuItem.Text = "Ajouter une demande expertise";
+            this.ajouterUneExpertiseToolStripMenuItem.Click += new System.EventHandler(this.ajouterUneExpertiseToolStripMenuItem_Click);
+            // 
+            // consulterLesDemandesExpertiseToolStripMenuItem
+            // 
+            this.consulterLesDemandesExpertiseToolStripMenuItem.Name = "consulterLesDemandesExpertiseToolStripMenuItem";
+            this.consulterLesDemandesExpertiseToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.consulterLesDemandesExpertiseToolStripMenuItem.Text = "Consulter les demandes expertise";
+            this.consulterLesDemandesExpertiseToolStripMenuItem.Click += new System.EventHandler(this.consulterLesDemandesExpertiseToolStripMenuItem_Click);
             // 
             // FormFenetrePrincipale
             // 
@@ -104,5 +131,8 @@ namespace GestContainer.Vues
         private System.Windows.Forms.ToolStripMenuItem dECLARATIONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DeclarerUnIncidentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ConsulterLesIncidentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eXPERTISEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUneExpertiseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consulterLesDemandesExpertiseToolStripMenuItem;
     }
 }

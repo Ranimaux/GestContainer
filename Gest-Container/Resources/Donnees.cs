@@ -19,6 +19,7 @@ namespace GestContainer.Resources
         private static List<Declaration> _collectionDeclaration;
         private static List<Inspection> _collectionInspection;
         private static List<Probleme> _collectionProbleme;
+        private static List<Expertise> _collectionExpertise;
 
         
         public static List<Container> CollectionContainer
@@ -98,6 +99,70 @@ namespace GestContainer.Resources
             set { Donnees._collectionDeclaration = value; }
         }
 
+        public static List<Expertise> CollectionExpertise
+        {
+            get
+            {
+                // Si la collection des déclarations n'a pas encore été chargée.
+
+                if (_collectionExpertise == null)
+                {
+                    List<Expertise> desDemandeExpertise = new List<Expertise>();
+
+                    try
+                    {
+                        // Ouvre une connexion à la base de données.
+
+                        DataBase.OpenConnection();
+
+                        // Prépare une commande pour sélectionner toutes les déclarations dans la table DECLARATION.
+
+                        MySqlCommand cmd = new MySqlCommand("SELECT * FROM EXPERTISE", DataBase.GetConnection());
+                        cmd.CommandType = CommandType.Text;
+
+                        // Exécute la commande et lit les résultats.
+
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            // Crée une instance Expertise à partir des données lues.
+
+                            Expertise uneDemandeExpertise = new Expertise
+                            {
+                                numExpertise = Convert.ToInt32(reader[0].ToString()),
+                                dateConstat = reader.GetDateTime(1),
+                                commentaireConstatation = reader[2].ToString(),
+                                contactResponsable = reader[3].ToString(),
+                                status = reader[4].ToString(),
+                                codeDeclaration = Convert.ToInt32(reader[5].ToString()),
+                                dateCreation = reader.GetDateTime(6)
+                            };
+                            // Ajoute la demande expertise à la liste.
+
+                            desDemandeExpertise.Add(uneDemandeExpertise);
+                        }
+                        // Stocke les déclarations récupérées dans la collection statique.
+                        _collectionExpertise = desDemandeExpertise;
+                    }
+                    catch (MySqlException ex)
+                    {
+                        // Affiche un message d'erreur si une exception MySQL est levée.
+                        MessageBox.Show("Erreur lors de la récupération de la table Expertise : " + ex.Message, "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        // Ferme la connexion à la base de données.
+                        DataBase.CloseConnection();
+                    }
+
+                }
+                // Retourne la collection des déclarations.
+                return Donnees._collectionExpertise;
+            }
+            // Permet de mettre à jour la collection des déclarations.
+            set { Donnees._collectionExpertise = value; }
+        }
 
         public static List<Inspection> CollectionInspection
         {
@@ -119,7 +184,7 @@ namespace GestContainer.Resources
         {
             get
             {
-                if(_collectionInspection == null)
+                if(_collectionProbleme == null)
                 {
                     List<Probleme> desProblemes = new List<Probleme>();
 

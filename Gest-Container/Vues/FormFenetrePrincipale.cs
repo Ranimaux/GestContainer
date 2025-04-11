@@ -51,5 +51,15 @@ namespace GestContainer.Vues
         {
 
         }
+
+        private void ajouterUneExpertiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MdiChild = new FormAjouterDemandeExpertise();
+        }
+
+        private void consulterLesDemandesExpertiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MdiChild = new FormConsultationExpertise();
+        }
     }
 }
